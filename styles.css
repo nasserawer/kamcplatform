@@ -364,7 +364,7 @@ header h1 {
 
 .item-image-container {
   position: relative;
-  width: 100%;
+  width: 80%;
 }
 
 .item-image-container::before {

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سرية خالد بن الوليد - كلية الملك عبدالعزيز الحربية</title>
+    <script>
+        function login() {
+            var secretNumber = document.getElementById("secretNumber").value;
+            var militaryNumber = document.getElementById("militaryNumber").value;
+
+            // تحقق من الرقم السري ورقم العسكري
+            if (secretNumber === "2006" && militaryNumber === "85603") {
+                // إذا كانت المدخلات صحيحة، انتقل إلى الرابط المحدد
+                window.location.href = "/kamcplatform/"; // استبدل هذا بالرابط الذي تريده
+            } else {
+                alert("الرقم السري أو الرقم العسكري غير صحيح.");
+            }
+        }
+    </script>
+</head>
+<style>
+@font-face {
+    font-family: "masmak";
+
+    src: url('/kamcplatform/assets/masmak.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "masmak";
+  }
+  html {
+    font-size: 62.5%;
+  }
+  *:not(i) {
+    font-family: "masmak";
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: #780606;
+    padding: 3rem 5rem;
+  }
+
+.button1 {
+      background-color: #780606;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  }
+
+.h22 {
+    font-size: 500%;
+}
+</style>
+
+<body>
+    <center>
+    <h2 class="h22">تسجيل الدخول</h2>
+    <label for="militaryNumber">الرقم العسكري:</label><br>
+    <input type="text" id="militaryNumber" required><br><br>
+    
+    <label for="secretNumber">الرقم السري:</label><br>
+    <input type="password" id="secretNumber" required><br><br>
+    
+    <button class="button1" onclick="login()">تسجيل الدخول</button>
+</center>
+</body>
+</html>
